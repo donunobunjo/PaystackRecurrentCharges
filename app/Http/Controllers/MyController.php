@@ -27,8 +27,9 @@ class MyController extends Controller
             'Cache-Control' => 'no-cache'
         ])->post('https://api.paystack.co/transaction/charge_authorization', [
             'authorization_code' => 'AUTH_wdhz30p1ct',
+            // 'authorization_code' => 'AUTH_wdhz3false',
             'email'=> 'don.unobunjo@gmail.com',
-            'amount'=> 780000
+            'amount'=> 7800
         ]);
         $result_out = json_decode($response->getBody()->getContents());
         dd($result_out);

@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +16,3 @@ use App\Http\Controllers\MyController;
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::post('/', 'TestController@testing');
-// Route::post('/', 'MyController@testing');
-Route::post('/',[MyController::class, 'testing']);
